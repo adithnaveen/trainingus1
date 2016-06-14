@@ -1,0 +1,9 @@
+127.0.0.1 - - [31/May/2016:10:32:55 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [31/May/2016:10:32:57 +0530] "GET /spring/index.jsp HTTP/1.1" 200 411
+0:0:0:0:0:0:0:1 - - [31/May/2016:10:32:57 +0530] "GET /favicon.ico HTTP/1.1" 404 973
+0:0:0:0:0:0:0:1 - - [31/May/2016:10:32:57 +0530] "GET /favicon.ico HTTP/1.1" 404 973
+0:0:0:0:0:0:0:1 - - [31/May/2016:10:32:58 +0530] "GET /spring/hello.html HTTP/1.1" 200 217
+0:0:0:0:0:0:0:1 - - [31/May/2016:10:33:01 +0530] "GET /spring/loginpage.html HTTP/1.1" 200 438
+0:0:0:0:0:0:0:1 - - [31/May/2016:10:33:05 +0530] "GET /spring/login.html?name=hkjsdf&pass=lkjsdf HTTP/1.1" 200 310
+0:0:0:0:0:0:0:1 - - [31/May/2016:10:33:10 +0530] "GET /spring/employee.html HTTP/1.1" 200 946
+0:0:0:0:0:0:0:1 - - [31/May/2016:10:33:12 +0530] "POST /spring/addemployee.html HTTP/1.1" 200 392

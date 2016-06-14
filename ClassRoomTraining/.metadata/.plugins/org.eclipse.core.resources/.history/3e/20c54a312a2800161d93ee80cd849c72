@@ -1,0 +1,15 @@
+package com.mypackage.client;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+
+import com.mypackage.beans.MyClass;
+import com.mypackage.config.MyClassConfig;
+
+public class ClientJavaConfig {
+	public static void main(String[] args) {
+		AbstractApplicationContext ctx = 
+				new AnnotationConfigApplicationContext
+						(MyClassConfig.class);
+	}
+}

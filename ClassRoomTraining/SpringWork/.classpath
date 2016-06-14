@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/antlr-2.7.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/aopalliance.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/aspectjrt.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/aspectjweaver.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/commons-collections.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/commons-collections-3.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/commons-dbcp.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/commons-logging.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/commons-pool.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/dom4j-1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/hibernate3.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/hibernate-jpa-2.0-api-1.0.0.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/hsqldb.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/javassist-3.12.0.GA.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/jta.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/jta-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/mysql-connector-java-5.1.17-bin.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/spring-aop-4.0.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/spring-aspects-4.0.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/spring-beans-4.0.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/spring-context-4.0.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/spring-context-support-4.0.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/spring-core-4.0.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/spring-expression-4.0.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/spring-jdbc-4.0.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/spring-orm-4.0.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/libs/lib/lib/spring-tx-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="xmlfiles"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

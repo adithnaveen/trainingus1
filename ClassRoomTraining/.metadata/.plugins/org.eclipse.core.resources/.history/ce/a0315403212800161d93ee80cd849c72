@@ -1,0 +1,5 @@
+package com.mypackage.postprocessing;
+
+public class InitializeBean {
+
+}

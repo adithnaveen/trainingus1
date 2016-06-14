@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<!--  if you say it as abstract = true they animal object is cannot be created -->
+
+	<bean id="animal" class="com.naveen.inheritence.Animal" abstract="true">
+	<property name="talk" value="Animals Talk"/>
+	<property name="walk" value="Animals Walk"/>
+	</bean>
+	
+	
+	<bean id="human" class="com.naveen.inheritence.Human" parent="animal">
+		<property name="ride" value="Humans Ride vehicle"/>
+		<property name="party" value="Week end party"/>
+		<property name="walk" value="Human Walk"/>
+	</bean>
+
+	<bean id="javacollection" class="com.naveen.injectingcollection.JavaCollection">
+	
+	<property name="addressList">
+		<list>
+			<value>Bengaluru</value>
+			<value>Chennai</value>
+			<value>Delhi</value>
+		</list>
+	</property>
+	
+	
+	<property name="addressSet">
+	<set>
+		<value>Bengaluru</value>
+		<value>Delhi</value>
+		<value>NewYork</value>
+	</set>
+	</property>
+	
+	<property name="addressMap">
+		<map>
+			<entry key="1" value="Karnataka"/>
+			<entry key="2" value="Delhi"/>
+			<entry key="3" value="Punjab"/>
+		</map>
+	</property>
+
+	<property name="addressProp">
+		<props>
+			<prop key="userName">root</prop>
+			<prop key="password">mysql</prop>
+		</props>
+	</property>
+	</bean>
+	
+	
+	<bean id="HelloWorld" class="com.naveen.events.HelloWorld">
+		<property name="message" value="Welcome Naveen"/>
+	</bean>
+	
+	<bean id="ContextStart" class="com.naveen.events.ContextStartEventHandler"/>
+	<bean id="ContextStop" class="com.naveen.events.ContextStopEventHandler"/>
+	
+	
+	
+</beans>

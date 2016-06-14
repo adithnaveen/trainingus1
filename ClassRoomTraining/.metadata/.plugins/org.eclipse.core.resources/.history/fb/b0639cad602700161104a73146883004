@@ -1,0 +1,29 @@
+package myPackage;
+
+public class TransferStep {
+
+@Given("^valid source account number$")
+public void valid_source_account_number() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    throw new PendingException();
+}
+
+@Given("^valid receipent account number$")
+public void valid_receipent_account_number() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    throw new PendingException();
+}
+
+@Given("^with sufficient balance$")
+public void with_sufficient_balance() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    throw new PendingException();
+}
+
+@Then("^transfer the amount$")
+public void transfer_the_amount() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    throw new PendingException();
+}
+
+}

@@ -1,0 +1,16 @@
+package com.mypackage.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.mypackage.beans.Employee;
+
+@Controller
+public class EmployeeController {
+
+	@RequestMapping("/employee.html")
+	public ModelAndView employee(){
+		return new ModelAndView("employee", "emp", new Employee());
+	}
+}

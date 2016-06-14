@@ -1,0 +1,5 @@
+package com.mypackage.beans;
+
+public class Employee {
+
+}

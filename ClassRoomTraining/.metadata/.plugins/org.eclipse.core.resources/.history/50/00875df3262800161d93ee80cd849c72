@@ -1,0 +1,5 @@
+package com.mypackage.client;
+
+public class CollectionClient {
+
+}

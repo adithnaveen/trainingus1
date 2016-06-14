@@ -1,0 +1,5 @@
+package com.mypackage.config;
+
+public class YourClassConfig {
+
+}

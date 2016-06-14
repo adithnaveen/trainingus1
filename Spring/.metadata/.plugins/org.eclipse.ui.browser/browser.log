@@ -1,0 +1,7 @@
+
+Jun 01, 2016 05:27:39.29 NEW SESSION
+Jun 01, 2016 05:27:39.29 1464739059232	addons.xpi	WARN	Bootstrap state is invalid (missing add-ons: C:\Users\Admin\AppData\Roaming\Mozilla\Firefox\Profiles\pon4yjn2.default\extensions\firefox-hotfix@mozilla.org.xpi)
+Jun 01, 2016 05:37:41.04 1464739661048	addons.update-checker	WARN	Update manifest for bingsearch.full@microsoft.com did not contain an updates property
+Jun 01, 2016 05:37:41.14 1464739661140	addons.update-checker	WARN	Update manifest for e10srollout@mozilla.org did not contain an updates property
+Jun 01, 2016 05:37:41.30 1464739661306	addons.update-checker	WARN	Update manifest for firefox@getpocket.com did not contain an updates property
+Jun 01, 2016 05:37:41.41 1464739661418	addons.update-checker	WARN	Update manifest for {972ce4c6-7e08-4474-a285-3208198ce6fd} did not contain an updates property

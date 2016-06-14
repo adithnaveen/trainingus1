@@ -1,0 +1,17 @@
+package com.mypackage.beans;
+
+import org.springframework.beans.factory.annotation.Value;
+
+public class MyClass {
+	@Value(String="hello")
+	private String myMessage;
+
+	public String getMyMessage() {
+		return myMessage;
+	}
+
+	public void setMyMessage(String myMessage) {
+		this.myMessage = myMessage;
+	}
+	
+}

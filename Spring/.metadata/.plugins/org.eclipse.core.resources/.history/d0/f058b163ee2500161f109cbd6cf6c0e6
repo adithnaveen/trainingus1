@@ -1,0 +1,25 @@
+package com.naveen.controller;
+
+@Controller
+public class LoginController {
+	
+	@RequestMapping(value="login.htm", method=RequestMethod.GET)
+	public  ModelAndView helloWorld(HttpServletRequest request, HttpServletResponse response){
+		
+		String name = request.getParameter("name");
+		String pwd = request.getParameter("pass");
+		
+		if(name.equals("naveen") && pwd.equals("india")){
+			String msg = "Hello " + name;
+			return new ModelAndView("hellopage", "message", msg);
+		}
+		
+		return new ModelAndView("loginerrorpage", "message", "Sorry invalid credentials");
+		
+	}
+	
+	@RequestMapping("loginpage.htm")
+	public ModelAndView showLoginPage(){
+		return new ModelAndView("LoginPage");
+	}
+}

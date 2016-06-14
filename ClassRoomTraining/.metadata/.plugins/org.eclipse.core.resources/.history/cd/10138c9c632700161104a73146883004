@@ -1,0 +1,33 @@
+@Sanity
+Feature: transfer of fund
+
+Scenario: successfull transfer of fund
+Given valid source account number
+And invalid receipent account number 
+And with sufficient balance 
+Then transfer the amount
+
+
+
+Scenario: successfull transfer of fund
+Given valid source account number
+And invalid receipent account number 
+And with insufficient balance 
+Then transfer the amount
+
+
+Scenario: successfull transfer of fund
+Given invalid source account number
+And valid receipent account number 
+And with sufficient balance 
+Then transfer the amount
+
+
+
+Scenario: successfull transfer of fund
+Given invalid source account number
+And invalid receipent account number 
+And with sufficient balance 
+Then transfer the amount
+
+

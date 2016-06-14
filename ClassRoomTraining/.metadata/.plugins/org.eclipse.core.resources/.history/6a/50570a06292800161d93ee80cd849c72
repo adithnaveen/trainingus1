@@ -1,0 +1,14 @@
+package com.mypackage.config;
+
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.context.annotation.Bean;
+
+import com.mypackage.beans.MyClass;
+
+@Configurable
+public class MyClassConfig {
+	@Bean
+	public MyClass myClass(){
+		return new MyClass();
+	}
+}

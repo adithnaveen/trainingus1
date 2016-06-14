@@ -1,0 +1,9 @@
+@Sanity
+Feature: transfer of fund
+
+Scenario: successfull transfer of fund
+Given "<src_status>" source account number
+And "<dest_status>" receipent account number 
+And with "<balance_status>" balance 
+Then transfer the amount
+

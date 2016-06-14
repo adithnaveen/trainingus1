@@ -1,0 +1,9 @@
+package com.naveen.beans;
+
+public class Employee {
+	private int empId;
+	private String empName;
+	private int age;
+	
+	
+}

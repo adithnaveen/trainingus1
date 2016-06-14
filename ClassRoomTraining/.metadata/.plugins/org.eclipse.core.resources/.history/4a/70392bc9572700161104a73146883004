@@ -1,0 +1,59 @@
+package myPackage;
+
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class LoginStep {
+
+
+//	Given: launch the application 
+//	When: user enters valid username and password
+//	And: clicks on login button 
+//	Then: User logged into the application 
+	
+	@Given("launch the application")
+	public void launch_the_application(){
+		System.out.println("launch the application >>>>>>> ");
+	}
+	
+	@When("^user enters valid username and password$")
+	public void user_enters_valid_username_and_password(){
+		System.out.println("user enters valid username and password>>>>");
+	}
+	
+	@And("clicks on login button")
+	public void clicks_on_login_button(){
+		System.out.println("clicks on login button>>>> ");
+	}
+	
+	@Then("User logged into the application")
+	public void user_logged_into_the_application(){
+		System.out.println("User logged into the application>>>>>");
+	}
+	
+	// invalid case 
+	
+//	Then User shown error message
+//  When user enters invalid username and password	
+	
+	
+	@Then("User shown error message")
+	public void user_shown_error_message(){
+		System.out.println("User shown error message<<<<<<<<");
+	}
+	
+	
+	/*
+	@When("user enters invalid username and password")
+	public void user_enters_invalid_username_and_password(){
+		System.out.println("user enters invalid username and password<<<<<");
+	}
+	*/
+	
+	
+	
+	
+	
+}

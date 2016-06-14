@@ -1,0 +1,82 @@
+package com.naveen.aop1;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
+
+// this will be automatically referred by spring container when we add a tag
+// <aop:aspectj-autoproxy/>
+@Component
+@Aspect
+public class Logging {
+
+	// @Before("execution(public String com.naveen.aop.Student.getName())")
+	// @Before("execution(public * get*())")
+	// @Before("execution(* get*())") matching for zero args
+	// @Before("execution(* get*(*))") atleast 1 args mandatory
+	// @Before("execution(* get*(..))") zero or more args
+	// @Before("execution(* com.naveen.*.get*(..))")
+
+	@Before("allGetters()")
+	public void secondAdvice() {
+		System.out.println("second advice ");
+	}
+
+	@Before("allGetters()")
+	public void myAdvice() {
+		System.out.println("testing advice ");
+	}
+
+	@Before("allGetters()")
+	public void loggingAdvicejointpoint(JoinPoint joinPoint) {
+		System.out.println(joinPoint.toString());
+	}
+
+	// then call is made once when we call from the program not from the spring
+	// container
+	@Before("args(name)")
+	public void stringArgumentBefore(String name) {
+		System.out.println("String argument passed is from advice : " + name);
+	}
+
+	/*
+	 * @Pointcut("execution(* get*())") public void allGetters(){}
+	 */
+
+	@Before("allGetters()")
+	public void beforeAdvice() {
+		System.out.println("Going to setup student profile.");
+	}
+
+	@Before("allGetters()")
+	public void secondBeforeAdvice() {
+		System.out.println("Second advice");
+	}
+
+	@Pointcut("execution(public * get*())")
+	public void allGetters() {
+	}
+
+	@After("execution(public String com.naveen.aop1.Student.getName())")
+	public void afterAdvice() {
+		System.out.println("Student profile has been setup. - After advice... ");
+	}
+
+	// this will execute when function does successfuly execution
+	@AfterReturning("execution(public String com.naveen.aop1.Student.getName())")
+	public void afterReturningAdvice() {
+		System.out.println("After successfull Returning:");// +
+															// retVal.toString()
+															// );
+	}
+	@AfterThrowing("args(name)")
+	public void AfterThrowingAdvice(String name) {
+		System.out.println("There has been an exception: " + name.toString());
+	}
+
+}

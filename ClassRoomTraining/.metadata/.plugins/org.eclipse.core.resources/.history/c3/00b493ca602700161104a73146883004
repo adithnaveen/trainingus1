@@ -1,0 +1,25 @@
+package myPackage;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+
+public class TransferStep {
+
+	@Given("^valid source account number$")
+	public void valid_source_account_number() throws Throwable {
+		System.out.println("valid source account number++++++");
+	}
+
+	@Given("^valid receipent account number$")
+	public void valid_receipent_account_number() throws Throwable {
+	}
+
+	@Given("^with sufficient balance$")
+	public void with_sufficient_balance() throws Throwable {
+	}
+
+	@Then("^transfer the amount$")
+	public void transfer_the_amount() throws Throwable {
+	}
+
+}

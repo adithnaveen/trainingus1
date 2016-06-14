@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+    default-init-method="init" default-destroy-method="destroy">
+
+
+<!--  we can autowire by two types 1. byName, 2. byType -->
+	<bean id="emp" 
+		class="com.mypackage.beans.Employee" autowire="byName">
+		<property name="empId" value="101"/>
+	</bean>
+
+	<bean id="name" class="com.mypackage.beans.Name">
+		<property name="firstName" value="Naveen"/>
+		<property name="lastName" value="Kumar"/>
+		<property name="middleName" value="K"/>
+	</bean>
+
+
+	<!-- collection bean info -->
+
+	<bean id="collection" class="com.mypackage.beans.JavaCollection">
+	
+	</bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>

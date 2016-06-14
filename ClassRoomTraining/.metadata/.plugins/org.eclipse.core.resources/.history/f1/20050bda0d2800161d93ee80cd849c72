@@ -1,0 +1,8 @@
+package com.mypackage.client;
+
+public class C1Employee {
+	public static void main(String[] args) {
+		// we want an object called Employee 
+		/// by not with new 
+	}
+}

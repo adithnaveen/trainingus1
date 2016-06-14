@@ -1,0 +1,16 @@
+package mypackage;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class TestLogin {
+	public static void main(String[] args) {
+		
+		
+		
+		  WebDriver driver = new FirefoxDriver();  
+		  String link ="http://localhost:9091/Testingproject/index.jsp";
+		  
+		  
+	}
+}

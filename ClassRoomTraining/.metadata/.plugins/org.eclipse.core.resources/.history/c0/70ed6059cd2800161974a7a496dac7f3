@@ -1,0 +1,39 @@
+package com.mypackage.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+
+
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.ui.ModelMap;
+
+@Controller
+public class HelloWorld{
+ 
+   @RequestMapping(value="/hello", method = RequestMethod.GET)
+   public String printHello(ModelMap model) {
+	   
+	   String message = "Welcome to Spring MVC";
+		// return new ModelAndView("welcome", "message", message);
+		
+		// first param : view name 
+		// Second param : Model Name 
+		// Third Param :Data Object 
+	   
+	   
+	   
+	   
+	   
+      model.addAttribute("message", message);
+
+      return "hello";
+      // /WEB-INF/jsp/hello.jsp
+   }
+
+}

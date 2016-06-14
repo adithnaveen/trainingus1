@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+<!-- default-init-method="init" default-destroy-method="destory" -->
+
+
+	<!-- initializing values with constructor -->
+	<bean id="student" class="com.naveen.initializeconstructor.Student">
+		<!-- <constructor-arg type="int" value="100"/> 
+		<constructor-arg type="java.lang.String" 
+			value="Naveen"/> -->
+
+		<constructor-arg index="0" value="100" />
+		<constructor-arg index="1" value="Naveen" />
+	</bean>
+
+	<bean id="helloWorld" class="com.naveen.HelloWorld" scope="singleton" >
+		<property name="message" value="Hello World!" />
+	</bean>
+
+	<bean id="employee" class="com.naveen.EmployeeBean" scope="prototype">
+		<!-- init-method="init" destroy-method="destory"> -->
+	</bean>
+
+	<!-- <bean class="com.naveen.InitEmployeeBean"></bean> 
+		 <bean class="com.naveen.InitEmployeeBean1"></bean> -->
+
+	<!-- dependency injection for text editor using constructor -->
+
+
+	<bean id="texteditor" class="com.naveen.dependencyinjection.TextEditor" lazy-init="true">
+		<constructor-arg ref="spellcheck"/>
+	</bean>
+
+	<!-- bean defination of spellcheck -->
+	<bean id="spellcheck" class="com.naveen.dependencyinjection.SpellCheck" lazy-init="true">
+	</bean>
+	
+	<!-- dependency injection for text editor using setter -->
+	<bean id="texteditor1" class="com.naveen.di.setter.TextEditor"
+		autowire="byName" lazy-init="true">
+		<!-- <property name="spellcheker" ref="spcheck"></property> -->
+	</bean>
+
+
+	<!-- this will work normally, but if you want to goto auto wire then giving 
+		the variable name as the id for the given bean is mandatory <bean id="spcheck" 
+		class="com.naveen.di.setter.SpellChecker"/> -->
+	<bean id="spellcheker" class="com.naveen.di.setter.SpellChecker"  lazy-init="true" />
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/navdb" />
+		<property name="username" value="root" />
+		<property name="password" value="kanchan" />
+	</bean>
+
+
+<bean id="studentJDBCTemplate" class="com.naveen.springdb.StudentJDBCTemplate">
+	<property name="dataSource" ref="dataSource"/>
+</bean>
+
+
+</beans>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="XMLFiles"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/aopalliance.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/commons-collections.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/commons-dbcp.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/commons-pool.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/hibernate3.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/hibernate-jpa-2.0-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/hsqldb.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/javassist-3.12.0.GA.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/jta.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/mysql-connector-java-5.1.17-bin.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/spring-aop-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/spring-aspects-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/spring-beans-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/spring-context-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/spring-context-support-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/spring-core-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/spring-expression-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/spring-jdbc-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/spring-orm-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Naveen/vinod sir works/Spring Basics/Spring Basics/lib/spring-tx-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Admin/Desktop/aspectjrt-1.7.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Admin/Desktop/aspectjweaver-1.7.4.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

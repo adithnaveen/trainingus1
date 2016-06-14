@@ -1,0 +1,15 @@
+package com.mypackage.client;
+
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.ClassPathResource;
+
+public class C1Employee {
+	public static void main(String[] args) {
+		// we want an object called Employee 
+		/// by not with new 
+		
+		
+		XmlBeanFactory factory = new XmlBeanFactory(new ClassPathResource("Beans.xml"));
+		
+	}
+}

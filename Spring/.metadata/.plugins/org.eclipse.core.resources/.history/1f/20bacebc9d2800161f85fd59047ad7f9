@@ -1,0 +1,57 @@
+package com.naveen.aop1;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+
+// this will be automatically referred by spring container when we add a tag
+// <aop:aspectj-autoproxy/>
+@Aspect
+public class Logging {
+
+	// @Before("execution(public String com.naveen.aop.Student.getName())")
+	// @Before("execution(public * get*())")
+	// @Before("execution(* get*())") matching for zero args
+	// @Before("execution(* get*(*))") atleast 1 args mandatory
+	// @Before("execution(* get*(..))") zero or more args
+	// @Before("execution(* com.naveen.*.get*(..))")
+
+	@Before("allGetters()")
+	public void beforeAdvice() {
+		System.out.println("Before advice 1... ");
+	}
+
+	@Before("allGetters()")
+	public void secondAdvice() {
+		System.out.println("Before advice 2... ");
+	}
+
+	
+	
+	@Before("execution(public String  getName())") 
+	public void allGetters(){ System.out.println(
+			  "Going to setup student profile."); }
+	
+	/*
+	 * @Before("allGetters()") public void beforeAdvice(){ System.out.println(
+	 * "Going to setup student profile."); }
+	 * 
+	 * @Before("allGetters()") public void secondBeforeAdvice(){
+	 * System.out.println("Second advice"); }
+	 * 
+	 * @Pointcut("execution(public * get*())") public void allGetters(){}
+	 * 
+	 * 
+	 * 
+	 * public void afterAdvice(){ System.out.println(
+	 * "Student profile has been setup."); }
+	 * 
+	 * 
+	 * public void afterReturningAdvice(Object retVal){
+	 * System.out.println("Returning:" + retVal.toString() ); }
+	 * 
+	 * 
+	 * public void AfterThrowingAdvice(IllegalArgumentException ex){
+	 * System.out.println("There has been an exception: " + ex.toString()); }
+	 */
+}

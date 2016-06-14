@@ -1,0 +1,91 @@
+[
+  {
+    "id": "login-into-account",
+    "description": "",
+    "name": "Login into account",
+    "keyword": "Feature",
+    "line": 1,
+    "elements": [
+      {
+        "description": "",
+        "name": "",
+        "keyword": "Background",
+        "line": 3,
+        "steps": [
+          {
+            "result": {
+              "duration": 143598771,
+              "status": "passed"
+            },
+            "name": "Lanuch chrome browser",
+            "keyword": "Given ",
+            "line": 4,
+            "match": {
+              "location": "LoginStep.Lanuch_chrome_browser()"
+            }
+          }
+        ],
+        "type": "background"
+      },
+      {
+        "id": "login-into-account;valid-username-and-password",
+        "description": "",
+        "name": "valid username and password",
+        "keyword": "Scenario",
+        "line": 6,
+        "steps": [
+          {
+            "result": {
+              "duration": 58561,
+              "status": "passed"
+            },
+            "name": "launch the application",
+            "keyword": "Given ",
+            "line": 7,
+            "match": {
+              "location": "LoginStep.launch_the_application()"
+            }
+          },
+          {
+            "result": {
+              "duration": 53127,
+              "status": "passed"
+            },
+            "name": "enter valid username and password",
+            "keyword": "Then ",
+            "line": 8,
+            "match": {
+              "location": "LoginStep.enter_valid_username_and_password()"
+            }
+          },
+          {
+            "result": {
+              "duration": 81502,
+              "status": "passed"
+            },
+            "name": "click on login button",
+            "keyword": "And ",
+            "line": 9,
+            "match": {
+              "location": "LoginStep.click_on_login_button()"
+            }
+          },
+          {
+            "result": {
+              "duration": 79087,
+              "status": "passed"
+            },
+            "name": "I am logged into application",
+            "keyword": "Then ",
+            "line": 10,
+            "match": {
+              "location": "LoginStep.I_am_logged_into_application()"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "uri": "com/mavencucumber/mavenCucumberPrototype/Login.feature"
+  }
+]

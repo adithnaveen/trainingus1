@@ -1,0 +1,31 @@
+package com.naveen.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.naveen.beans.Employee;
+
+@Controller
+public class EmployeeController {
+
+	
+	@RequestMapping(value="/emploee.html", method=RequestMethod.GET)
+	public ModelAndView employee(){
+		System.out.println("In Employee ");
+		
+		// this will call employee.jsp in WEB-INF/jsp
+		
+		return new ModelAndView("employee", "command", new Employee());
+	}
+	
+	
+	public String addEmployee(Employee employee, ModelMap model){
+		
+	}
+	
+	
+	
+}

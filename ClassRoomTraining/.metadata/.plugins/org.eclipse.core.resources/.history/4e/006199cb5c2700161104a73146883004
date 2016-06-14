@@ -1,0 +1,21 @@
+Feature: Login to account
+
+Scenario: valid username and password 
+Given launch the application 
+When user enters valid username and password
+# this is called as data table, where we supply the values 
+# for the given method 
+|userName   |password   |level    |
+|scott      |tiger      |Developer|
+|rakesh     |hello222   |manager  |
+And clicks on login button 
+Then User logged into the application 
+
+
+Scenario: invalid username and password 
+Given launch the application 
+When user enters invalid username and password
+|userName   |password   |level    |
+
+And clicks on login button 
+Then User notlogged into the application 

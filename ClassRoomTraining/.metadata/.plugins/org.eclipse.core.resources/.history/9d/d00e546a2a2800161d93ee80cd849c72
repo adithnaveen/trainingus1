@@ -1,0 +1,14 @@
+package com.mypackage.beans;
+
+public class MyClass {
+	private String myMessage;
+
+	public String getMyMessage() {
+		return myMessage;
+	}
+
+	public void setMyMessage(String myMessage) {
+		this.myMessage = myMessage;
+	}
+	
+}
