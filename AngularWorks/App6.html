@@ -1,0 +1,54 @@
+ <html>
+    <body ng-app>
+        
+        <div ng-controller="firstcontroller">
+            Name from First Controller {{firstname}}
+            <br><br>
+            <label>Set First Name <input type="text" ng-model="firstname" /></label>
+            
+            <div ng-controller="secondcontroller">
+                <h3>Inside Second controller </h3>
+                <label>last name : <input type="text" ng-model="lastname" /></label>
+                
+                <br>
+                <br>
+                
+                First Name is {{firstname}} - Last Name is {{lastname}}
+
+                <br><br>
+                Full Name is {{getFullName()}}
+                
+                
+            </div>
+            
+            
+        </div>
+        
+<script src="https://code.angularjs.org/1.2.20/angular.min.js"></script>
+
+    
+    <script>
+        
+     var firstcontroller = function($scope){
+                console.log("controller called");
+                $scope.firstname = "Naveen";
+            };
+        
+    var secondcontroller = function ($scope){
+        console.log("Second controller loaded");
+        $scope.lastname = "Srinivas";
+        
+        
+        
+        $scope.getFullName = function(){
+            return $scope.firstname +" " + $scope.lastname;
+        }
+        
+    };    
+        
+        
+        
+           
+    </script>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+
+<html>
+    
+    <head>
+        
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        
+    <style>
+            body{
+                padding-top: 10px;
+                background-color: beige;
+            }        
+    </style>
+
+    </head>
+    <body ng-app="sampleapp">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Sl No </th>
+                                <th>Order No</th>
+                                <td>Description</td>
+                            </tr>
+                        </thead>
+                        
+                        
+                        
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>1234</td>
+                                <td>Mac Book Air</td>
+                                <td><a href="#ShowOrder/1234/Mac Book">Show Details</a></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2</td>
+                                <td>2222</td>
+                                <td>Casio Edifice</td>
+                                <td><a href="#ShowOrder/2222/Casio Edifice">Show Details</a></td>
+                            </tr>
+                            
+                            
+                            <tr>
+                                <td>3</td>
+                                <td>2323</td>
+                                <td>iPhone</td>
+                                <td><a href="#ShowOrder/2323/iPhone">Show Details</a></td>
+                            </tr>
+                            
+                            
+                        </tbody>
+                    
+                    </table>
+                
+                    
+                    <div ng-view=""></div>
+                </div>
+            </div>
+        
+        </div>    
+        
+        
+    <script src="https://code.angularjs.org/1.2.20/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+
+        <script>
+            angular.module("sampleapp", ['ngRoute'])
+            .config(['$routeProvider', function($routeProvider){
+                $routeProvider.
+                
+                when('/ShowOrder/:orderId/:something', {
+                    templateUrl:'show_order1.html',
+                    controller:'ShowOrderController'
+                });
+            }])
+        
+            .controller('ShowOrderController', function($scope, $routeParams){
+                console.log('Controller Called');
+                $scope.message = $routeParams.orderId;
+                console.log($routeParams.orderId);
+                console.log($routeParams.something);
+                
+                $scope.message1 = $routeParams.something;                
+            })
+        </script>
+        
+        
+        
+    </body>
+</html>

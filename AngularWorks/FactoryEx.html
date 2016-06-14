@@ -1,0 +1,55 @@
+<html>
+
+    <body ng-app="myapp">
+    
+        <div ng-controller="hiController">
+            <p>{{sayHiFactory}}</p>
+        </div>
+        
+        <div ng-controller="byeController">
+            <p>{{sayByeFactory}}</p>
+        </div>
+		
+		<div ng-controller="newController">
+			<p>{{sayNewMessage}}</p>
+		</div>
+
+    <script src="https://code.angularjs.org/1.2.20/angular.min.js"></script>
+
+        
+        <script>
+            angular.module("myapp", [])
+            
+            .factory('testfactory', function(){
+                return{
+                    sayHello: function(text){
+                        return "Factory says Hello Mr/Ms " + text;
+                    },
+
+                    sayBye : function(text){
+                        return   "Factory says Bye Mr/Ms " + text;
+                    }, 
+					sayMeHi : function(text){
+						return "From factory you said ->  " + text;
+					}
+                }
+            })
+        
+            
+            .controller("hiController", function($scope, testfactory){
+                console.log("Hi i'm in hi controller");
+              $scope.sayHiFactory = testfactory.sayHello('Naveen');
+            })
+            
+            .controller("byeController", function($scope, testfactory){
+                $scope.sayByeFactory = testfactory.sayBye('Kanchan Naveen');
+            })
+			
+			.controller("newController", function($scope, testfactory){
+				$scope.sayNewMessage = testfactory.sayMeHi("Fannie Mae");
+			})
+        </script>
+        
+    </body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+
+<div data-ng-app="IndianCurrency" >
+
+{{20|india}}
+
+</div>
+<script>
+angular.module('IndianCurrency', []).filter('india', function() {
+	  return function(input) {
+	    return 'Rs. '+ input ;
+	  };
+	});
+	
+
+
+</script>
+</body>
+</html>

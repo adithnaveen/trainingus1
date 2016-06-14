@@ -1,0 +1,56 @@
+<html>
+	<body ng-app>
+	
+		<!-- this controller refers to java script 
+		 function --> 
+		<div ng-controller="firstController">
+			<p>Data From First Controller </p>
+			
+			First Name : {{firstName}}<br />
+			Last Name : {{lastName}}<br />
+			Full Name : {{getFullName()}}
+			
+		</div>
+	<hr>
+        
+    <div data-ng-controller="secondcontroller">
+        <p>From Second Controller</p>
+		<input type="text" ng-model="firstname" />
+        First Name : {{firstname}}
+        <br>
+        Last Name  :  {{lastname}}
+        <br>
+        Full Name : {{getFullName()}}
+    </div>
+        
+
+		<script src="https://code.angularjs.org/1.2.20/angular.js"></script>
+	
+		<script type="text/javascript">
+			var firstController = function($scope){
+				$scope.firstName = "Tim";
+				$scope.lastName ="Mercer";
+				
+				$scope.getFullName = function(){
+					return $scope.firstName +", "
+						+ $scope.lastName;
+				}
+			}
+			
+			
+        
+        var secondcontroller =  function($scope){
+            // initialize modal variables 
+            
+            $scope.firstname = "Kanchan";
+            $scope.lastname = "Srinivas";
+            
+            $scope.getFullName = function(){
+                return $scope.firstname +", " + $scope.lastname;
+            };
+        };   
+
+		</script>
+	
+	</body>
+</html>

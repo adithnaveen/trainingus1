@@ -1,0 +1,52 @@
+
+<html>
+
+<!-- program for providers  -->
+    <body ng-app="myapp">
+        
+        <div ng-controller="mycontroller">
+            {{hellos}}
+        </div>
+
+        <script src="https://code.angularjs.org/1.2.20/angular.min.js"></script>
+
+        
+        <script>
+        
+            var myapp = angular.module("myapp", []);
+            
+            
+            myapp.provider ('helloworld', function(){
+                this.name ="Default";
+                
+                this.$get =function(){
+                    var name = this.name ;
+                    return {
+                        sayHello: function(){
+                            return "hello " + name +"!";
+
+                        }
+                    }
+                };
+                
+                this.setName = function(name){
+                    this.name = name;
+                }
+            });
+            
+            // good thing about provider is you can still configure in 
+            // in config section 
+            
+            myapp.config(function(helloworldProvider){
+                helloworldProvider.setName("Naveen");
+            });            
+            myapp.controller("mycontroller", function($scope, helloworld){
+                $scope.hellos =[
+                    helloworld.sayHello()
+                ];
+            });
+            
+        </script>
+    </body>
+</html>
+

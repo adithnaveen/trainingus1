@@ -1,0 +1,47 @@
+<html>
+
+    <body ng-app="myapp">
+    
+    <div ng-controller="simplecontroller">
+        <strong>First Name is {{personinstance.firstname}}</strong><br>
+        <strong>Last Name is {{personinstance.lastname}}</strong><br>
+        <strong>Full Name is {{personinstance.fullname()}}</strong><br>
+        <br>
+        <br>
+        
+        
+        First Name <input type="text" ng-model="personinstance.firstname" />
+        <br>
+        Last Name <input type="text" ng-model="personinstance.lastname" />
+        
+        
+    </div>
+        <script src="https://code.angularjs.org/1.2.20/angular.min.js"></script>
+
+        <script type="text/javascript">
+
+            angular.module("myapp", [])
+            
+            .value("person", {
+                
+                firstname:"Kanchan", 
+                lastname:"Naveen", 
+                
+                
+                fullname: function(){
+                    console.log("First Name in value is  "+ this.firstname);
+                    return this.firstname +" - " + this.lastname;
+                }
+            })
+            .controller("simplecontroller", function($scope, person){
+                // initalizing the person 
+                console.log("in simple Controller");
+                
+                $scope.personinstance = person;
+            });
+        </script>
+        
+        
+    </body>
+</html>
+

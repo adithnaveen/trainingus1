@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+    
+    
+    <head>
+        
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        
+    <style>
+            body{
+                padding-top: 10px;
+                background-color: beige;
+            }        
+    </style>
+
+    </head>
+    
+<body>
+
+<div data-ng-controller="SimpleController">
+	Enter Name : <input type="text" ng-model="name" />
+    <br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <table class="table table-striped">
+					
+					
+                    <tr ng-repeat="cust in customers | filter:name "><td>
+        {{cust.name}} - {{cust.city}}
+		
+		
+                        </td>
+                        </tr>       
+                        
+                </div>
+            </div>
+    </div>
+
+                    
+</div>
+
+<script src="https://code.angularjs.org/1.2.20/angular.min.js"></script>
+
+<script type="text/javascript">
+	var demoApp = angular.module("demoApp", []);
+	
+	function SimpleController($scope) {
+		$scope.customers = [
+				{name:'Naveen', city:'Bengaluru'},
+				{name:'Kumar', city:'Bengaluru'},
+				{name:'Kanchan', city:'Mangaluru'},
+                {name:'Dinesh', city:'New Delhi'}
+		];
+		
+	}	
+	
+	demoApp.controller("SimpleController", SimpleController);
+	
+	
+</script>
+</body>
+</html>
+

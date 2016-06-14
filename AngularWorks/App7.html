@@ -1,0 +1,13 @@
+<html>
+
+    <body ng-app>
+
+        <label>Show / Hide<input type="checkbox" ng-model="temp"/></label>
+        <hr>
+        <div ng-if="temp" style="width:100px; height:50px; background-color:cyan;">
+		Hey You Checked!!!! :)</div>
+        <div ng-if="!temp">You Did not Checked :(</div>
+        
+        <script src="https://code.angularjs.org/1.2.20/angular.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+
+    
+    <body ng-app='myapp'>
+        
+        <div ng-controller='hicontroller'>
+            {{sayHi}}
+        </div>
+        
+        <div ng-controller="byecontroller"> 
+            {{sayBye}}
+        </div>
+
+        
+        <script src="https://code.angularjs.org/1.2.20/angular.min.js"></script>
+    
+        <script>
+            angular.module('myapp', [])
+            
+            .service('myservice', function(){
+                this.sayHello = function(name){
+                    return "Service Says Hello Mr/Ms :" + name;
+                };
+                
+                
+                this.sayBye = function(name){
+                    return "Service Says Bye Mr/Ms :" + name;
+                };
+            })
+            
+            .controller('hicontroller', function($scope, myservice){
+                $scope.sayHi = myservice.sayHello('Naveen Kumar');
+                console.log($scope.sayHi);
+            })
+            
+            .controller('byecontroller', function($scope, myservice){
+                $scope.sayBye = myservice.sayBye('Kanchan');
+            })
+        
+        </script>
+        
+    </body>
+</html>
+
+
